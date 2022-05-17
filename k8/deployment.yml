@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-nextjs
+  labels:
+    app: docker-nextjs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-nextjs
+  template:
+    metadata:
+      labels:
+        app: docker-nextjs
+    spec:
+      containers:
+        - name: docker-nextjs
+          image: gcr.io/kubernetes-project-350417/docker-nextjs:v1
+          ports:
+            - containerPort: 3000
