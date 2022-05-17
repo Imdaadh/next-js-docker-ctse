@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: docker-nextjs
-          image: gcr.io/kubernetes-project-350417/docker-nextjs:v1
+          image: gcr.io/kubernetes-project-350417/github.com/imdaadh/next-js-docker-ctse
           ports:
             - containerPort: 3000
